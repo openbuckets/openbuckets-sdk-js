@@ -13,7 +13,7 @@ This Postman collection aims to showcase the capabilities of OpenBuckets by prov
 Install it via:
 
 ```shell
-npm install openbuckets --save
+npm i @openbucketsio/openbuckets --save
 ```
 
 
