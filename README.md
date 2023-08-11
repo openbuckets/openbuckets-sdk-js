@@ -61,7 +61,7 @@ module: {
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
 ```javascript
-var OpenBucketsApi = require('openbuckets');
+var OpenBucketsApi = require('@openbucketsio/openbuckets');
 
 var defaultClient = OpenBucketsApi.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
