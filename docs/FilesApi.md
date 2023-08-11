@@ -19,7 +19,7 @@ This request allows you to perform a highly specific search for files within the
 ### Example
 
 ```javascript
-import OpenBucketsApi from 'open_buckets_api';
+import OpenBucketsApi from 'openbuckets';
 let defaultClient = OpenBucketsApi.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];

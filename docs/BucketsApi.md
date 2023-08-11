@@ -19,7 +19,7 @@ This request enables you to perform a targeted search for buckets within the Ope
 ### Example
 
 ```javascript
-import OpenBucketsApi from 'open_buckets_api';
+import OpenBucketsApi from 'openbuckets';
 let defaultClient = OpenBucketsApi.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
