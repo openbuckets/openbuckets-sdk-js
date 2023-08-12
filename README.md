@@ -2,7 +2,7 @@
 
 OpenBucketsApi - JavaScript client for openbuckets
 
-The OpenBuckets web-based tool is a powerful utility that allows users to quickly locate open buckets in cloud storage systems through a simple query. In addition, it provides a convenient way to search for various file types across these open buckets, making it an essential tool for security professionals, researchers, and anyone interested in discovering exposed data.
+The [OpenBuckets](https://openbuckets.io) web-based tool is a powerful utility that allows users to quickly locate [open buckets in cloud storage systems](https://openbuckets.io) through a simple query. In addition, it provides a convenient way to search for various file types across these open buckets, making it an essential tool for security professionals, researchers, and anyone interested in discovering exposed data.
 This Postman collection aims to showcase the capabilities of OpenBuckets by providing a set of API requests that demonstrate how to leverage its features. By following this collection, you'll learn how to utilize OpenBuckets to identify open buckets and search for specific file types within them.
 
 ## Installation
