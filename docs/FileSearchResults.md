@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**total** | **Number** | Total number of matching files | [optional] 
-**results** | **[File]** |  | [optional] 
+**files** | [**[FileSearchResultsFilesInner]**](FileSearchResultsFilesInner.md) | An array of files. | [optional] 
+**meta** | [**FileSearchResultsMeta**](FileSearchResultsMeta.md) |  | [optional] 
+**query** | [**FileSearchResultsQuery**](FileSearchResultsQuery.md) |  | [optional] 
 
 

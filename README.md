@@ -1,9 +1,8 @@
-# openbuckets
+# OpenBuckets 
+The [OpenBuckets](https://openbuckets.io) web-based tool is a powerful utility that allows users to quickly locate open buckets in cloud storage systems through a simple query. In addition, it provides a convenient way to search for various file types across these open buckets, making it an essential tool for security professionals, researchers, and anyone interested in discovering exposed data.
+This package aims to showcase the capabilities of [OpenBuckets](https://openbuckets.io) by providing a set of API requests that demonstrate how to leverage its features. By following this collection, you'll learn how to utilize [OpenBuckets](https://openbuckets.io) to identify open buckets and search for specific file types within them.
 
-OpenBucketsApi - JavaScript client for openbuckets
-
-The [OpenBuckets](https://openbuckets.io) web-based tool is a powerful utility that allows users to quickly locate [open buckets in cloud storage systems](https://openbuckets.io) through a simple query. In addition, it provides a convenient way to search for various file types across these open buckets, making it an essential tool for security professionals, researchers, and anyone interested in discovering exposed data.
-This Postman collection aims to showcase the capabilities of OpenBuckets by providing a set of API requests that demonstrate how to leverage its features. By following this collection, you'll learn how to utilize OpenBuckets to identify open buckets and search for specific file types within them.
+For more information, please visit [https://openbuckets.io](https://openbuckets.io)
 
 ## Installation
 
@@ -38,6 +37,7 @@ browserify main.js > bundle.js
 
 Then include *bundle.js* in the HTML pages.
 
+
 ### Webpack Configuration
 
 Using Webpack you may encounter the following error: "Module not found: Error:
@@ -64,7 +64,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 var OpenBucketsApi = require('@openbucketsio/openbuckets');
 
 var defaultClient = OpenBucketsApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
+// Configure Bearer (auth-scheme) access token for authorization: bearerAuth
 var bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
@@ -72,9 +72,9 @@ var api = new OpenBucketsApi.BucketsApi()
 var opts = {
   'keywords': abg, // {String} the search keywords to filter bucket names (e.g., \"abg\")
   'type': aws, // {String} the type of bucket to filter (e.g., aws,dos,azure,gcp)
-  'exact': 0, // {String} whether to perform an exact match for the keywords (0 for false, 1 for true)
-  'start': 0, // {String} starting index for pagination
-  'limit': 1000, // {String} number of search results to return per page
+  'exact': 0, // {Number} whether to perform an exact match for the keywords (0 for false, 1 for true)
+  'start': 0, // {Number} starting index for pagination
+  'limit': 1000, // {Number} number of search results to return per page
   'order': fileCount, // {String} the sorting field for the search results (e.g., \"fileCount\" for sorting by file count)
   'direction': asc // {String} the sorting direction for the search results (e.g., \"asc\" for ascending)
 };
@@ -103,15 +103,23 @@ Class | Method | HTTP request | Description
 
  - [OpenBucketsApi.Bucket](docs/Bucket.md)
  - [OpenBucketsApi.BucketSearchResults](docs/BucketSearchResults.md)
+ - [OpenBucketsApi.BucketSearchResultsBucketsInner](docs/BucketSearchResultsBucketsInner.md)
+ - [OpenBucketsApi.BucketSearchResultsMeta](docs/BucketSearchResultsMeta.md)
+ - [OpenBucketsApi.BucketSearchResultsQuery](docs/BucketSearchResultsQuery.md)
  - [OpenBucketsApi.File](docs/File.md)
  - [OpenBucketsApi.FileSearchResults](docs/FileSearchResults.md)
+ - [OpenBucketsApi.FileSearchResultsFilesInner](docs/FileSearchResultsFilesInner.md)
+ - [OpenBucketsApi.FileSearchResultsMeta](docs/FileSearchResultsMeta.md)
+ - [OpenBucketsApi.FileSearchResultsQuery](docs/FileSearchResultsQuery.md)
 
 
 ## Documentation for Authorization
+
+Go to https://openbuckets.io/dashboard/api-keys to generate API Key to use with this package.
 
 
 Authentication schemes defined for the API:
 ### bearerAuth
 
-- **Type**: Bearer authentication
+- **Type**: Bearer authentication (auth-scheme)
 

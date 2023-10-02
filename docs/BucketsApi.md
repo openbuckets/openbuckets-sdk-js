@@ -19,9 +19,9 @@ This request enables you to perform a targeted search for buckets within the Ope
 ### Example
 
 ```javascript
-import OpenBucketsApi from 'openbuckets';
+import OpenBucketsApi from 'open_buckets_api';
 let defaultClient = OpenBucketsApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
+// Configure Bearer (auth-scheme) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
@@ -29,9 +29,9 @@ let apiInstance = new OpenBucketsApi.BucketsApi();
 let opts = {
   'keywords': abg, // String | the search keywords to filter bucket names (e.g., \"abg\")
   'type': aws, // String | the type of bucket to filter (e.g., aws,dos,azure,gcp)
-  'exact': 0, // String | whether to perform an exact match for the keywords (0 for false, 1 for true)
-  'start': 0, // String | starting index for pagination
-  'limit': 1000, // String | number of search results to return per page
+  'exact': 0, // Number | whether to perform an exact match for the keywords (0 for false, 1 for true)
+  'start': 0, // Number | starting index for pagination
+  'limit': 1000, // Number | number of search results to return per page
   'order': fileCount, // String | the sorting field for the search results (e.g., \"fileCount\" for sorting by file count)
   'direction': asc // String | the sorting direction for the search results (e.g., \"asc\" for ascending)
 };
@@ -51,9 +51,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **keywords** | **String**| the search keywords to filter bucket names (e.g., \&quot;abg\&quot;) | [optional] 
  **type** | **String**| the type of bucket to filter (e.g., aws,dos,azure,gcp) | [optional] 
- **exact** | **String**| whether to perform an exact match for the keywords (0 for false, 1 for true) | [optional] 
- **start** | **String**| starting index for pagination | [optional] 
- **limit** | **String**| number of search results to return per page | [optional] 
+ **exact** | **Number**| whether to perform an exact match for the keywords (0 for false, 1 for true) | [optional] 
+ **start** | **Number**| starting index for pagination | [optional] 
+ **limit** | **Number**| number of search results to return per page | [optional] 
  **order** | **String**| the sorting field for the search results (e.g., \&quot;fileCount\&quot; for sorting by file count) | [optional] 
  **direction** | **String**| the sorting direction for the search results (e.g., \&quot;asc\&quot; for ascending) | [optional] 
 

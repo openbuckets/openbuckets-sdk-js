@@ -19,33 +19,29 @@ This request allows you to perform a highly specific search for files within the
 ### Example
 
 ```javascript
-import OpenBucketsApi from 'openbuckets';
+import OpenBucketsApi from 'open_buckets_api';
 let defaultClient = OpenBucketsApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
+// Configure Bearer (auth-scheme) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new OpenBucketsApi.FilesApi();
 let opts = {
-  'keywords': org%20images%20-aws, // String | multiple keywords. - denotes stop keywords
-  'order': size, // String | the sorting field for the search results (e.g., \"size\", \"last_modified\")
+  'keywords': org images -aws, // String | multiple keywords.\"-\" denotes stop keywords
+  'order': size, // String | the sorting field for the search results (e.g., \"size\", \"lastModified\")
   'direction': desc, // String | the sorting direction for the search results (e.g., \"desc\" for descending)
-  'fullPath': 1, // String | include the full path in the search results (1 for true, 0 for false)
-  'extensions': pdf%2C.env, // String | comma-separated list of file extensions to include (e.g., \"pdf,env\")
+  'fieldToSearch': desc, // String | taken into consideration if you provide any of the allowed values, \"cloudProvider\",\"fileExtension\",\"fileName\",\"fileUrl\",\"fullPath\"
+  'fullPath': 1, // Number | include the full path in the search results (1 for true, 0 for false)
+  'extensions': pdf,.env, // String | comma-separated list of file extensions to include (e.g., \"pdf,env\")
   'lastModifiedFrom': 1682965800, // String | UNIX timestamp for the starting date of the last modification range
   'lastModifiedTo': 1693420200, // String | UNIX timestamp for the ending date of the last modification rang
   'sizeFrom': 15155035, // String | minimum file size in bytes
   'sizeTo': 4538824351471, // String | maximum file size in bytes
-  'start': 0, // String | starting index for pagination
-  'limit': 1000, // String | number of search results to return per page
+  'start': 0, // Number | starting index for pagination
+  'limit': 20, // Number | number of search results to return per page, based on your role.  If you send a value more than the allowed limit, we set it to the allowed limit.
   'excludeBuckets': 45,54, // String | comma-separated list of bucket IDs to exclude from the search
-  'regexp': false, // String | use regular expression for the search (true or false)
-  'noautocorrect': false, // String | disable autocorrection in the search query (true or false)
   'buckets': , // String | filter search results to specific bucket IDs
-  'stopExtensions': , // String | comma-separated list of file extensions to exclude
-  'pagingMode': offset, // String | pagination mode (e.g., \"offset\" for offset-based)
-  'searchAfter': , // String | token to continue a scroll-based search
-  'scrollId':  // String | scroll ID for a continuation of a scroll-based search
+  'stopExtensions': .csv,.env // String | comma-separated list of file extensions to exclude with or without \".\" (e.g., sql, .sql)
 };
 apiInstance.searchFiles(opts, (error, data, response) => {
   if (error) {
@@ -61,25 +57,21 @@ apiInstance.searchFiles(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keywords** | **String**| multiple keywords. - denotes stop keywords | [optional] 
- **order** | **String**| the sorting field for the search results (e.g., \&quot;size\&quot;, \&quot;last_modified\&quot;) | [optional] 
+ **keywords** | **String**| multiple keywords.\&quot;-\&quot; denotes stop keywords | [optional] 
+ **order** | **String**| the sorting field for the search results (e.g., \&quot;size\&quot;, \&quot;lastModified\&quot;) | [optional] 
  **direction** | **String**| the sorting direction for the search results (e.g., \&quot;desc\&quot; for descending) | [optional] 
- **fullPath** | **String**| include the full path in the search results (1 for true, 0 for false) | [optional] 
+ **fieldToSearch** | **String**| taken into consideration if you provide any of the allowed values, \&quot;cloudProvider\&quot;,\&quot;fileExtension\&quot;,\&quot;fileName\&quot;,\&quot;fileUrl\&quot;,\&quot;fullPath\&quot; | [optional] 
+ **fullPath** | **Number**| include the full path in the search results (1 for true, 0 for false) | [optional] 
  **extensions** | **String**| comma-separated list of file extensions to include (e.g., \&quot;pdf,env\&quot;) | [optional] 
  **lastModifiedFrom** | **String**| UNIX timestamp for the starting date of the last modification range | [optional] 
  **lastModifiedTo** | **String**| UNIX timestamp for the ending date of the last modification rang | [optional] 
  **sizeFrom** | **String**| minimum file size in bytes | [optional] 
  **sizeTo** | **String**| maximum file size in bytes | [optional] 
- **start** | **String**| starting index for pagination | [optional] 
- **limit** | **String**| number of search results to return per page | [optional] 
+ **start** | **Number**| starting index for pagination | [optional] 
+ **limit** | **Number**| number of search results to return per page, based on your role.  If you send a value more than the allowed limit, we set it to the allowed limit. | [optional] 
  **excludeBuckets** | **String**| comma-separated list of bucket IDs to exclude from the search | [optional] 
- **regexp** | **String**| use regular expression for the search (true or false) | [optional] 
- **noautocorrect** | **String**| disable autocorrection in the search query (true or false) | [optional] 
  **buckets** | **String**| filter search results to specific bucket IDs | [optional] 
- **stopExtensions** | **String**| comma-separated list of file extensions to exclude | [optional] 
- **pagingMode** | **String**| pagination mode (e.g., \&quot;offset\&quot; for offset-based) | [optional] 
- **searchAfter** | **String**| token to continue a scroll-based search | [optional] 
- **scrollId** | **String**| scroll ID for a continuation of a scroll-based search | [optional] 
+ **stopExtensions** | **String**| comma-separated list of file extensions to exclude with or without \&quot;.\&quot; (e.g., sql, .sql) | [optional] 
 
 ### Return type
 

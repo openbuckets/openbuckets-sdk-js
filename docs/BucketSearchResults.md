@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**total** | **Number** | Total number of matching buckets | [optional] 
-**results** | [**[Bucket]**](Bucket.md) |  | [optional] 
+**buckets** | [**[BucketSearchResultsBucketsInner]**](BucketSearchResultsBucketsInner.md) | An array of buckets. | [optional] 
+**meta** | [**BucketSearchResultsMeta**](BucketSearchResultsMeta.md) |  | [optional] 
+**query** | [**BucketSearchResultsQuery**](BucketSearchResultsQuery.md) |  | [optional] 
 
 
